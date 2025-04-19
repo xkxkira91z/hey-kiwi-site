@@ -48,7 +48,7 @@
     }
 
     function yesClicked() {
-      alert("You monster 😱");
+      alert("Are you sure 😱");
       document.body.style.backgroundColor = getRandomColor();
     }
 
@@ -56,4 +56,10 @@
       const letters = '0123456789ABCDEF';
       let color = '#';
       for (let i = 0; i < 6; i++) {
-        color +=
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
