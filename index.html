@@ -29,13 +29,13 @@
     #no {
       background-color: #f44336;
       color: white;
-      position: absolute; /* Changed from 'relative' to 'absolute' */
+      position: absolute;
     }
   </style>
 </head>
 <body>
   <h1>Hey Kiwi, can I kidnap you?</h1>
-  <button id="yes" onclick="alert('im on my way to NZ')">Yes</button>
+  <button id="yes" onclick="yesClicked()">Yes</button>
   <button id="no" onmouseover="moveButton()">No</button>
 
   <script>
@@ -46,6 +46,14 @@
       button.style.left = `${x}px`;
       button.style.top = `${y}px`;
     }
-  </script>
-</body>
-</html>
+
+    function yesClicked() {
+      alert("You monster 😱");
+      document.body.style.backgroundColor = getRandomColor();
+    }
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color +=
