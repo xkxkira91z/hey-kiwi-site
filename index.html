@@ -29,7 +29,7 @@
     #no {
       background-color: #f44336;
       color: white;
-      position: relative;
+      position: absolute; /* Changed from 'relative' to 'absolute' */
     }
   </style>
 </head>
@@ -43,5 +43,9 @@
       const button = document.getElementById("no");
       const x = Math.floor(Math.random() * (window.innerWidth - 100));
       const y = Math.floor(Math.random() * (window.innerHeight - 100));
-      button.style.position = 'absolute';
-      button.style.left = `${
+      button.style.left = `${x}px`;
+      button.style.top = `${y}px`;
+    }
+  </script>
+</body>
+</html>
